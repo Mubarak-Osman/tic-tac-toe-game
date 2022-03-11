@@ -1,0 +1,50 @@
+.booklist {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: PT Sans;
+  }
+  
+  .card {
+    display: flex;
+    margin: 15px;
+    text-align: center;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(170, 170, 170, 1);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(170, 170, 170, 1);
+    box-shadow: 0px 4px 8px 0px rgba(170, 170, 170, 1);
+    max-width: 300px;
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .card__image {
+    height: 450px;
+  }
+  
+  .card__container {
+    background: white;
+    border-radius: 4px;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card__title,
+  .card__author {
+    color: #00bcd6;
+    font-size: 14px;
+  }
+  
+  .card__book-title {
+    display: block;
+    margin: 0px auto 10px auto;
+  }
+  
+  .card__book-title,
+  .card__book-author {
+    color: black;
+    font-size: 14px;
+    flex: 1 0 auto;
+  }
