@@ -1,0 +1,125 @@
+body {
+    background-color: #14bdac;
+  }
+  
+  .title {
+    font-size: 42px;
+    margin-top: 40px;
+  }
+  
+  .notification {
+    font-size: 28px;
+  }
+  
+  .title,
+  .notification {
+    font-family: cursive;
+    text-align: center;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    border-collapse: collapse;
+    margin: 20px auto;
+  }
+  
+  .container--win .cell {
+    cursor: default;
+  }
+  
+  @media screen and (min-width: 400px) {
+    .container {
+      padding-bottom: 550px;
+    }
+  }
+  
+  .cell {
+    position: relative;
+    padding-bottom: 33.3%;
+    height: 0;
+    width: 33.3%;
+    border: 1px solid black;
+    background: #14bdac;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    float: left;
+    box-sizing: border-box;
+  }
+  
+  .cell--white {
+    background: white;
+    transition: background-color 2s ease-in-out;
+  }
+  
+  .row:first-child .cell {
+    border-top: none;
+  }
+  
+  .row:last-child .cell {
+    border-bottom: none;
+  }
+  
+  .row .cell:first-child {
+    border-left: none;
+  }
+  
+  .row .cell:last-child {
+    border-right: none;
+  }
+  
+  .cell--x,
+  .cell--o {
+    cursor: default;
+    margin: 0 auto;
+  }
+  
+  .cell--x::before,
+  .cell--x::after,
+  .cell--o::after {
+    content: "";
+    position: absolute;
+    width: 28vw;
+    height: 28vw;
+    box-sizing: border-box;
+    margin-top: 50%;
+  }
+  
+  .cell--x::before,
+  .cell--x::after {
+    max-width: 5px;
+    max-height: 80px;
+    background-color: black;
+    border-radius: 10%;
+  }
+  
+  .cell--x::before {
+    transform: translate(-50%, -50%) rotate(35deg);
+  }
+  
+  .cell--x::after {
+    transform: translate(-50%, -50%) rotate(145deg);
+  }
+  
+  .cell--o::after {
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 50%;
+    border: 5px solid black;
+    transform: translate(-50%, -50%);
+  }
+  
+  .button {
+    font-size: 1.5em;
+    padding: 0.3em 1em;
+    background: yellow;
+    border-radius: 10%;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+  }
+  
